@@ -3,8 +3,10 @@ using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PayoneerTest.page.objects
 {
@@ -12,7 +14,7 @@ namespace PayoneerTest.page.objects
     {
         String URL = "https://payouts.sandbox.payoneer.com/partners/or.aspx?pid=Y0LwV0AQC7cY%2b5AIqsZl1g%3d%3d%20&langid=1";
 
-        
+
         //CC option
         [FindsBy(How = How.Id, Using = "payoutMethods_4")]
         public IWebElement slcCC { get; set; }
@@ -160,9 +162,12 @@ namespace PayoneerTest.page.objects
         public IWebElement ddlIDCardIssuePlace { get; set; }
 
         //submit form button
-        [FindsBy(How = How.Id, Using = "btnSubmit")]
+        //[FindsBy(How = How.Id, Using = "btnSubmit")]
+        [FindsBy(How = How.XPath, Using = "//div[@class='full-page']/div/div/span/input[@id='btnSubmit']")]
         public IWebElement btnSubmit { get; set; }
 
+
+        
         //last stage ifrme
         [FindsBy(How = How.Id, Using = "iframMR")]
         public IWebElement frmMR { get; set; }
@@ -173,7 +178,8 @@ namespace PayoneerTest.page.objects
             PageFactory.InitElements(driver, this);
         }
 
-        public void init(){
+        public void init()
+        {
             PageFactory.InitElements(driver, this);
         }
 
@@ -259,12 +265,13 @@ namespace PayoneerTest.page.objects
             clickOnCC();
             clickOnSignUp();
             clickOnCompeny();
-            enterCompanyName("Yuval Glasman inc");
+            enterCompanyName("Some company name");
             enterCompanyLegalEntity(2);
             enterCompanyURL("https://il.linkedin.com/in/yuval-glasman-04bab651");
             enterContactFirstName("Yuval");
             enterContactLastName("Glasman");
-            enterEmailAddress("yuval.glasman@mailinator.com");
+            String time = tools.time.getCurrentDate();
+            enterEmailAddress("yuval" + time + "@mailinator.com");
             enterCompanyBirthDay("1", "1", "1980");
             btnNext.Click();
         }
@@ -383,9 +390,10 @@ namespace PayoneerTest.page.objects
             agreeToTC();
             enterIdNum("123456789");
             enterIdIssueCountry("Israel");
-            //submitForm();
+            //wait for the button to be clickable
+            System.Threading.Thread.Sleep(2000);
+            submitForm();
             returnFromIframe();
-            System.Threading.Thread.Sleep(5000);
         }
     }
 }

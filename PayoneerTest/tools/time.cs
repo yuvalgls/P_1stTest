@@ -7,11 +7,12 @@ namespace PayoneerTest.tools
 {
     class time
     {
+        private static object localDate;
 
         public static String getCurrentDate()
         {
             DateTime dateTime = DateTime.UtcNow.Date;
-            return dateTime.ToString("dd/MM/yyyy");
+            return DateTime.Now.ToString("yyyyMMddHHmmss");
         }
     }
 }
