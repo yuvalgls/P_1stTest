@@ -1,0 +1,10 @@
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\bin\Debug\PayoneerTest.dll
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\bin\Debug\PayoneerTest.pdb
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\bin\Debug\WebDriver.dll
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\bin\Debug\WebDriver.Support.dll
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\bin\Debug\WebDriver.xml
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\bin\Debug\WebDriver.Support.xml
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\obj\Debug\PayoneerTest.csprojResolveAssemblyReference.cache
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\obj\Debug\PayoneerTest.dll
+c:\users\yuval\documents\visual studio 2015\Projects\PayoneerTest\PayoneerTest\obj\Debug\PayoneerTest.pdb
